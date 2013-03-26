@@ -36,4 +36,3 @@ string obj = "TEST";
 MyEnum e = ConvertSafe.ToGeneric(obj, MyEnum.DEFAULT_VALUE);
 ```
 
-tortoise-svn test
