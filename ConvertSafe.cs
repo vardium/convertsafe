@@ -72,5 +72,16 @@ namespace Ipucu.Utility
         public static bool ToBoolean(object obj) { return ToBoolean(obj, false); }
         public static bool ToBoolean(object obj, bool defaultValue) { return ToGeneric(obj, defaultValue); }
 
+        public static DateTime? ToDateTime(string text)
+        {
+            DateTime date;
+            return DateTime.TryParse(text, out date) ? date : (DateTime?)null;
+        }
+
+        public static DateTime? ToDateTime(string text, string format)
+        {
+            DateTime date;
+            return DateTime.TryParse(String.Format(format, text), out date) ? date : (DateTime?)null;
+        }
     }
 }
